@@ -11,7 +11,7 @@ import NewPassword from './Components/Screens/NewPassword';
 import Verification from './Components/Screens/Verification';
 import PaymentMethod from './Components/Screens/PaymentMethod';
 import OnlineClass from './Components/Screens/OnlineClass';
-import Progress from './Components/Screens/Progress';
+import Process from './Components/Screens/Process';
 
 const stack = createNativeStackNavigator();
 
@@ -31,6 +31,10 @@ const Routing = () => {
         <stack.Screen
         name='Home'
         component={OnlineClass}/>
+        <stack.Screen 
+        name='Process'
+        component={Process}
+        />
       </stack.Navigator>
     </NavigationContainer>
   );

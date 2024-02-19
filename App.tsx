@@ -9,15 +9,15 @@ import NewPassword from './Components/Screens/NewPassword';
 import Verification from './Components/Screens/Verification';
 import PaymentMethod from './Components/Screens/PaymentMethod';
 import OnlineClass from './Components/Screens/OnlineClass';
-import Progress from './Components/Screens/Progress';
 import Routing from './Routing';
 import Profile from './Components/Screens/Profile';
 import Teacher from './Components/Screens/Teacher';
+import Process from './Components/Screens/Process';
 
 
 const App = () => {
   return(
-    <Routing/>
+    <process/>
   );
 }
 

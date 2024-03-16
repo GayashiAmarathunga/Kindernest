@@ -1,5 +1,11 @@
-import {StyleSheet, Text, View} from 'react-native';
-import {CalendarProps} from 'react-native-calendars';
+import {
+  Pressable,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 
 interface CustomDayProps {
   date?: {
@@ -10,9 +16,20 @@ interface CustomDayProps {
     timestamp: number;
   };
   schedules: string[];
+  onDatePress: (date: {
+    dateString: string;
+    day: number;
+    month: number;
+    year: number;
+    timestamp: number;
+  }) => void;
 }
 
-const CustomDay: React.FC<CustomDayProps> = ({date, schedules}) => {
+const CustomDay: React.FC<CustomDayProps> = ({
+  date,
+  schedules,
+  onDatePress,
+}) => {
   // Handle case where date is undefined
   if (!date) {
     return null;
@@ -22,9 +39,9 @@ const CustomDay: React.FC<CustomDayProps> = ({date, schedules}) => {
   const getColorForSchedule = (schedule: string): string => {
     switch (schedule) {
       case 'class':
-        return 'green';
+        return '#FF0000';
       case 'task':
-        return 'blue';
+        return '#0094FF';
       default:
         return 'black';
     }
@@ -40,12 +57,12 @@ const CustomDay: React.FC<CustomDayProps> = ({date, schedules}) => {
   };
   return (
     // Custom Day
-    <View style={styles.container}>
+    <Pressable style={styles.container} onPress={() => onDatePress(date)}>
       <Text style={styles.day}>{date.day}</Text>
 
       {/* Render colored lines marking schedules */}
       {renderLinesForSchedules()}
-    </View>
+    </Pressable>
   );
 };
 

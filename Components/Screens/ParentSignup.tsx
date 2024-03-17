@@ -10,6 +10,8 @@ const ParentSignup = ({navigation}) => {
       <TextInput style={styles.input}></TextInput>
       <Text style={styles.text}>Child Name</Text>
       <TextInput style={styles.input}></TextInput>
+      <Text style={styles.text}>Child Name</Text>
+      <TextInput style={styles.input}></TextInput>
       <Text style={styles.text}>Kindergarten Level </Text>
       <TextInput style={styles.input}></TextInput>
       <Text style={styles.text}>Class</Text>

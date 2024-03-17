@@ -1,5 +1,25 @@
-import React from 'react';
-import {Button, Pressable, StyleSheet, Text, View} from 'react-native';
+import React, {useState} from 'react';
+
+import ClassSchedule from './ClassSchedule';
+import TasksSchedule from './TasksSchedule';
+
+import {
+  Button,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+
+const scheduleData: {[key: string]: string[]} = {
+  '2024-03-01': ['class'],
+  '2024-03-04': ['task'],
+  '2024-03-05': ['class'],
+  '2024-03-13': ['task'],
+  '2024-03-20': ['task'],
+  '2024-03-29': ['class'],
+};
 
 const handlePress = (schedule: {
   dateString: string;
@@ -21,6 +41,8 @@ const Schedule: React.FC<{
     year: number;
   };
 }> = ({schedule}) => {
+  const [activeTab, setActiveTab] = useState('classes');
+
   return (
     <View style={styles.container}>
       {/* header */}
@@ -40,15 +62,24 @@ const Schedule: React.FC<{
         </Pressable>
       </View>
 
-      {/* conditional rendering based on day's schedule */}
-      <View>
-        <Button
-          onPress={() => handlePress(schedule)}
-          title="consolelog"
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button"
-        />
+      {/* Different tabs in schedule */}
+      <View style={styles.scheduleTabsContainer}>
+        {/* Classes */}
+        <Pressable onPress={() => setActiveTab('classes')}>
+          <Text style={styles.scheduleTab}>Classes</Text>
+        </Pressable>
+
+        {/* Tasks */}
+        <Pressable onPress={() => setActiveTab('tasks')}>
+          <Text style={styles.scheduleTab}>Tasks</Text>
+        </Pressable>
       </View>
+
+      {/* Area to view classes or tasks */}
+      <ScrollView style={styles.scheduleArea}>
+        {/* conditional rendering based on activeTab */}
+        {activeTab === 'classes' ? <ClassSchedule /> : <TasksSchedule />}
+      </ScrollView>
     </View>
   );
 };
@@ -58,8 +89,10 @@ export default Schedule;
 const styles = StyleSheet.create({
   container: {
     width: '75%',
+    alignItems: 'center',
   },
   header: {
+    width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
@@ -73,10 +106,26 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#9100EB',
+    backgroundColor: '#751695',
   },
   addBtnIcon: {
     borderRadius: 2,
     backgroundColor: '#FFF',
   },
+  scheduleTabsContainer: {
+    width: '90%',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    marginTop: 20,
+    // borderColor: 'red',
+    // borderStyle: 'solid',
+    // borderWidth: 1,
+  },
+  scheduleTab: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: 12,
+    color: '#751695',
+  },
+  scheduleArea: {},
 });

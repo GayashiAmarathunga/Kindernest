@@ -74,7 +74,7 @@ const Calender = () => {
             dotColor: 'blue',
             selectedDotColor: 'white',
             arrowColor: 'blue',
-            monthTextColor: '#9100EB',
+            monthTextColor: '#751695',
             textDayFontFamily: 'Poppins-Medium',
             textDayFontSize: styles.day.fontSize,
             textMonthFontFamily: 'Poppins-Medium',

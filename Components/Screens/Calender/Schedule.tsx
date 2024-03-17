@@ -12,15 +12,6 @@ import {
   View,
 } from 'react-native';
 
-const scheduleData: {[key: string]: string[]} = {
-  '2024-03-01': ['class'],
-  '2024-03-04': ['task'],
-  '2024-03-05': ['class'],
-  '2024-03-13': ['task'],
-  '2024-03-20': ['task'],
-  '2024-03-29': ['class'],
-};
-
 const handlePress = (schedule: {
   dateString: string;
   day: number;
@@ -33,14 +24,14 @@ const handlePress = (schedule: {
 };
 
 const Schedule: React.FC<{
-  schedule: {
+  day: {
     dateString: string;
     day: number;
     month: number;
     timestamp: number;
     year: number;
   };
-}> = ({schedule}) => {
+}> = ({day}) => {
   const [activeTab, setActiveTab] = useState('classes');
 
   return (
@@ -78,7 +69,11 @@ const Schedule: React.FC<{
       {/* Area to view classes or tasks */}
       <ScrollView style={styles.scheduleArea}>
         {/* conditional rendering based on activeTab */}
-        {activeTab === 'classes' ? <ClassSchedule /> : <TasksSchedule />}
+        {activeTab === 'classes' ? (
+          <ClassSchedule day={day} />
+        ) : (
+          <TasksSchedule />
+        )}
       </ScrollView>
     </View>
   );
@@ -113,19 +108,23 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
   },
   scheduleTabsContainer: {
-    width: '90%',
+    width: '100%',
+    maxHeight: '15%',
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
     marginTop: 20,
-    // borderColor: 'red',
-    // borderStyle: 'solid',
-    // borderWidth: 1,
   },
   scheduleTab: {
+    width: 120,
+    height: '100%',
+    textAlign: 'center',
     fontFamily: 'Poppins-Medium',
     fontSize: 12,
     color: '#751695',
+    // borderColor: 'blue',
+    // borderStyle: 'solid',
+    // borderWidth: 1,
   },
   scheduleArea: {},
 });

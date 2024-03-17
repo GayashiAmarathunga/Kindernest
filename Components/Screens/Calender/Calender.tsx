@@ -124,7 +124,7 @@ const Calender = () => {
       </View>
 
       {/* Schedule */}
-      <Schedule schedule={selectedDay} />
+      <Schedule day={selectedDay} />
     </SafeAreaView>
   );
 };

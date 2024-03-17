@@ -8,7 +8,7 @@ const TeacherSignUp = () => {
       <Text style={styles.textheading}>Sign Up</Text>
       <Text style={styles.text}>Teachers Name</Text>
       <TextInput style={styles.input}></TextInput>
-      <Text style={styles.text}>Kindergarten Name </Text>
+      <Text style={styles.text}>Kindergarten Level </Text>
       <TextInput style={styles.input}></TextInput>
       <Text style={styles.text}>Gender</Text>
       <TextInput style={styles.input}></TextInput>

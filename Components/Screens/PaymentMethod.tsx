@@ -43,14 +43,14 @@ const styles = StyleSheet.create({
         fontSize: 16,
         textAlign: 'center',
         marginLeft: 80,
-        marginTop: 17,
+        marginTop: 5,
     },
     text1: {
         color: 'black',
         fontSize: 16,
         textAlign: 'center',
         marginRight: 50,
-        marginTop: 80,
+        marginTop: 70,
     },
     input: {
         borderWidth: 1,
@@ -60,9 +60,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#B7ADAD',
         color: 'black',
         paddingLeft: 20,
-        marginBottom: 10,
+        marginBottom: 40,
         height:40,
-        marginBottom:40,
         marginTop: 80,
     },
     input1: {
@@ -73,9 +72,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#B7ADAD',
         color: 'black',
         paddingLeft: 20,
-        marginBottom: 10,
+        marginBottom: 40,
         height:40,
-        marginBottom:40,
+        
         marginTop: -10,
     },
     input2: {
@@ -86,9 +85,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#B7ADAD',
         color: 'black',
         paddingLeft: 20,
-        marginBottom: 10,
+        marginBottom: 40,
         height:40,
-        marginBottom:40,
+      
         marginTop: -80,
         
     },
@@ -100,9 +99,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#B7ADAD',
         color: 'black',
         paddingLeft: 20,
-        marginBottom: 10,
+        marginBottom: 30,
         height:40,
-        marginBottom:40,
         marginTop: -80,
     },
     input4: {
@@ -113,10 +111,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#B7ADAD',
         color: 'black',
         paddingLeft: 20,
-        marginBottom: 10,
+        marginBottom: 30,
         height:40,
-        marginBottom:40,
-        marginTop: -10,
+        
     },
     input5: {
         borderWidth: 1,
@@ -126,12 +123,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#B7ADAD',
         color: 'black',
         paddingLeft: 20,
-        marginBottom: 10,
+        marginBottom: 40,
         height:40,
-        marginBottom:40,
-        marginTop: -10,
+       
     },
+ })
     
-    
-    
-    })

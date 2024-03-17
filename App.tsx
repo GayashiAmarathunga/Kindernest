@@ -12,12 +12,11 @@ import OnlineClass from './Components/Screens/OnlineClass';
 import Routing from './Routing';
 import Profile from './Components/Screens/Profile';
 import Teacher from './Components/Screens/Teacher';
-import Process from './Components/Screens/Process';
 
 
 const App = () => {
   return(
-    <process/>
+    <Routing/>
   );
 }
 

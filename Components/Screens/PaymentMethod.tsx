@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     textheading: {
         fontSize: 26,  
         color: 'black',
-        marginTop: 40,
+        marginTop: 30,
         marginBottom: 20,
         textAlign: 'center',
         fontWeight: 'bold',
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         textAlign: 'center',
         marginLeft: 80,
-        marginTop: 5,
+
     },
     text1: {
         color: 'black',

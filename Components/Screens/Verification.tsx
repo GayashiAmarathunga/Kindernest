@@ -20,7 +20,7 @@ const Verification = () => {
             <ImageBackground source={require('../images/Verification.png')} resizeMode="cover" style={styles.image}>
                 <Text style={styles.textheading}>Verification</Text>
                 <Text style={styles.text}>Enter the Verification code</Text>
-                <Text style={styles.text}>{message}</Text>
+                <Text style={styles.text}>{message}</Text> 
                 <OtpInput
                     numberOfDigits={4}
                     focusStickBlinkingDuration={500}

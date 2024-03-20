@@ -16,7 +16,7 @@ import Teacher from './Components/Screens/Teacher';
 
 const App = () => {
   return(
-    <Routing/>
+    <Profile />
   );
 }
 

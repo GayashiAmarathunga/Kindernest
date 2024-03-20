@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     textheading: {
         fontSize: 26,  
         color: 'black',
-        marginTop: 30,
+        marginTop: 60,
         marginBottom: 20,
         textAlign: 'center',
         fontWeight: 'bold',
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         marginBottom: 40,
         height:40,
-        marginTop: 80,
+        marginTop: 110,
     },
     input1: {
         borderWidth: 1,
@@ -87,7 +87,6 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         marginBottom: 40,
         height:40,
-      
         marginTop: -80,
         
     },

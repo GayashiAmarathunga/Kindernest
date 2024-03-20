@@ -12,11 +12,12 @@ import OnlineClass from './Components/Screens/OnlineClass';
 import Routing from './Routing';
 import Profile from './Components/Screens/Profile';
 import Teacher from './Components/Screens/Teacher';
+import Contactus from './Components/Screens/Contactus';
 
 
 const App = () => {
   return(
-    <Profile />
+    <Contactus/>
   );
 }
 

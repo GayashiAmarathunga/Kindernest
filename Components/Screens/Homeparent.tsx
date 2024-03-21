@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const Home = () => {
+const Homeparent = () => {
     return (
         <View style={styles.container}>
             <ImageBackground source={require('../images/Home.png')} resizeMode="cover" style={styles.image}>
@@ -63,105 +63,105 @@ const Home = () => {
                 </View>
             </ImageBackground>
         </View>
-    )
+  )
 }
 
-export default Home
+export default Homeparent
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    image: {
-        flex: 1,
-    },
-    wrapper: {
-        alignSelf: 'center',
-        width: 280,
-        borderRadius: 20,
-        backgroundColor: '#FFFEFE',
-        height: 120,
-        marginBottom: 40,
-        marginTop: 50,
-        justifyContent: 'center',
-        marginLeft: 125,
-    },
-    text: {
-        color: 'black',
-        fontSize: 18,
-        textAlign: 'left',
-        marginLeft: 40,
-    },
-    text1: {
-        color: 'black',
-        fontSize: 25,
-        textAlign: 'left',
-        marginLeft: 40,
-    },
-    text2: {
-        color: 'black',
-        fontSize: 15,
-        textAlign: 'left',
-        marginLeft: 40,
-    },
-    profile: {
-        width: 80,
-        height: 60,
-        position: 'absolute',
-        right: 40
-    },
-    text3: {
-        color: 'black',
-        fontSize: 18,
-        textAlign: 'center',
-        marginLeft: 40,
-        marginTop: -23,
-    },
-    onlinebtn: {
-        backgroundColor: 'white',
-        height: 80,
-        width: 96,
-        borderRadius: 5,
-        marginHorizontal: 15,
-        marginTop: 15,
-        alignItems: 'center'
-    },
-    view: {
-        alignItems: 'center'
-    },
-    text4: {
-        color: 'black',
-    },
-    Progresstn: {
-        backgroundColor: 'white',
-        height: 128,
-        width: 142,
-        borderRadius: 5,
-        marginHorizontal: 15,
-        marginTop: 60,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginLeft: 30,
-    },
-    Calendartn: {
-        height: 132,
-        width: 112,
-        borderRadius: 5,
-        marginHorizontal: 15,
-        marginTop: 60,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginLeft: 30,
-    },
-    text5: {
-        color: 'black',
-        fontSize: 20,
-        textAlign: 'center',
-        marginLeft: 150,
-        marginTop: -110,
-    },
-    Schedule:{
-        marginLeft: 150,
-        marginTop: -100,
-    }
+        container: {
+            flex: 1,
+        },
+        image: {
+            flex: 1,
+        },
+        wrapper: {
+            alignSelf: 'center',
+            width: 280,
+            borderRadius: 20,
+            backgroundColor: '#FFFEFE',
+            height: 120,
+            marginBottom: 40,
+            marginTop: 50,
+            justifyContent: 'center',
+            marginLeft: 125,
+        },
+        text: {
+            color: 'black',
+            fontSize: 18,
+            textAlign: 'left',
+            marginLeft: 40,
+        },
+        text1: {
+            color: 'black',
+            fontSize: 25,
+            textAlign: 'left',
+            marginLeft: 40,
+        },
+        text2: {
+            color: 'black',
+            fontSize: 15,
+            textAlign: 'left',
+            marginLeft: 40,
+        },
+        profile: {
+            width: 80,
+            height: 60,
+            position: 'absolute',
+            right: 40
+        },
+        text3: {
+            color: 'black',
+            fontSize: 18,
+            textAlign: 'center',
+            marginLeft: 40,
+            marginTop: -23,
+        },
+        onlinebtn: {
+            backgroundColor: 'white',
+            height: 80,
+            width: 96,
+            borderRadius: 5,
+            marginHorizontal: 15,
+            marginTop: 15,
+            alignItems: 'center'
+        },
+        view: {
+            alignItems: 'center'
+        },
+        text4: {
+            color: 'black',
+        },
+        Progresstn: {
+            backgroundColor: 'white',
+            height: 128,
+            width: 142,
+            borderRadius: 5,
+            marginHorizontal: 15,
+            marginTop: 60,
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginLeft: 30,
+        },
+        Calendartn: {
+            height: 132,
+            width: 112,
+            borderRadius: 5,
+            marginHorizontal: 15,
+            marginTop: 60,
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginLeft: 30,
+        },
+        text5: {
+            color: 'black',
+            fontSize: 20,
+            textAlign: 'center',
+            marginLeft: 150,
+            marginTop: -110,
+        },
+        Schedule:{
+            marginLeft: 150,
+            marginTop: -100,
+        },
 })

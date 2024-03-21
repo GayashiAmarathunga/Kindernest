@@ -79,6 +79,7 @@ const PaymentMethod = ({ navigation }) => {
     </View>
   );
 }
+export default PaymentMethod;
 
 const styles = StyleSheet.create({
   container: {
@@ -144,4 +145,3 @@ const styles = StyleSheet.create({
   },  
 });
 
-export default PaymentMethod;

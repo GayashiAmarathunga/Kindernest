@@ -14,20 +14,12 @@ import Profile from './Components/Screens/Profile';
 import Teacher from './Components/Screens/Teacher';
 import Contactus from './Components/Screens/Contactus';
 import Home from './Components/Screens/Home';
+import Homeparent from './Components/Screens/Homeparent';
 
 
 const App = () => {
   return(
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <PaymentMethod
-    />
-=======
-    <Profile/>
->>>>>>> 78737137eaf5da1b8e11eeb5b64db7870e937823
-=======
-    <Home />
->>>>>>> 5cf18e3ff7e2281fe1b201811663e778f795cc4c
+    <Homeparent/>
   );
 }
 

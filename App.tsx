@@ -13,11 +13,12 @@ import Routing from './Routing';
 import Profile from './Components/Screens/Profile';
 import Teacher from './Components/Screens/Teacher';
 import Contactus from './Components/Screens/Contactus';
+import Home from './Components/Screens/Home';
 
 
 const App = () => {
   return(
-    <Profile/>
+    <Home />
   );
 }
 

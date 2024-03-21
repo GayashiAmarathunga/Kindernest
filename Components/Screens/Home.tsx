@@ -1,50 +1,69 @@
-import { StyleSheet, Text, View,ImageBackground,Image,TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 
 const Home = () => {
-  return (
-    <View style={styles.container}>
-        <ImageBackground source={require('../images/Home.png')} resizeMode="cover" style={styles.image}>
-        <View style={styles.wrapper}>
-        <Text style={styles.text}>Howdy,</Text>    
-        <Text style={styles.text1}>John Doe</Text>
-        <Text style={styles.text2}>Active</Text>
-        <Image style={styles.profile} source={require("../images/MaleFemale.png")}></Image>
-        </View>
-        <View>
-        <Text style={styles.text3}>Quick Actions</Text>   
-        </View>
-         <View style={{flexDirection:'row'}}> 
-            <View style={styles.view}>
-            <TouchableOpacity style={styles.onlinebtn}>
-            <Image source={require("../images/Classroom.png")}></Image>
-            </TouchableOpacity>
-            <Text style={styles.text}>Online Classes</Text>
-            </View>
-            <View style={styles.view}>
-            <TouchableOpacity style={styles.onlinebtn}>
-            <Image source={require("../images/Homeworks.png")}></Image>
-            </TouchableOpacity>
-            <Text style={styles.text}>Online Classes</Text>
-            </View>
-            <View style={styles.view}>
-            <TouchableOpacity style={styles.onlinebtn}>
-            <Image source={require("../images/Activities.png")}></Image>
-            </TouchableOpacity>
-            <Text style={styles.text}>Online Classes</Text>
-            </View>
-            </View>
-            <View style={{flexDirection:'row'}}></View>
-            <TouchableOpacity style={styles.progressbtn}>
-            <Image style={{alignSelf:'center',}} source={require("../images/Progress.png")}></Image>
-             
-            </TouchableOpacity>
-        <View>
-        </View>
+    return (
+        <View style={styles.container}>
+            <ImageBackground source={require('../images/Home.png')} resizeMode="cover" style={styles.image}>
+                <View style={styles.wrapper}>
+                    <Text style={styles.text}>Howdy,</Text>
+                    <Text style={styles.text1}>John Doe</Text>
+                    <Text style={styles.text2}>Active</Text>
+                    <Image style={styles.profile} source={require("../images/MaleFemale.png")}></Image>
+                </View>
+                <View>
+                    <Text style={styles.text3}>Quick Actions</Text>
+                </View>
+                <View style={{ flexDirection: 'row' }}>
+                    <View style={styles.view}>
+                        <TouchableOpacity style={styles.onlinebtn}>
+                            <Image source={require("../images/Classroom.png")}></Image>
+                        </TouchableOpacity>
+                        <Text style={styles.text4}>Online Classes</Text>
+                    </View>
+                    <View style={styles.view}>
+                        <TouchableOpacity style={styles.onlinebtn}>
+                            <Image source={require("../images/Homeworks.png")}></Image>
+                        </TouchableOpacity>
+                        <Text style={styles.text4}>Homeworks</Text>
+                    </View>
+                    <View style={styles.view}>
+                        <TouchableOpacity style={styles.onlinebtn}>
+                            <Image source={require("../images/Activities.png")}></Image>
+                        </TouchableOpacity>
+                        <Text style={styles.text4}>Activities</Text>
+                    </View>
+                </View>
 
-     </ImageBackground>
-    </View>
-  )
+                <View style={{ flexDirection: 'row' }}>
+                    <View style={styles.view}>
+                        <TouchableOpacity style={styles.Progresstn}>
+                            <Image source={require("../images/Progress.png")}></Image>
+                        </TouchableOpacity>
+                        <Text style={styles.text4}>Progress</Text>
+                    </View>
+                    <View style={styles.view}>
+                        <TouchableOpacity style={styles.Progresstn}>
+                            <Image source={require("../images/Emergency.png")}></Image>
+                        </TouchableOpacity>
+                        <Text style={styles.text4}>Emergency Alerts</Text>
+                    </View>
+                    </View>
+                <View>
+
+                    <View style={styles.view}>
+                        <TouchableOpacity style={styles.Calendartn}>
+                            <Image source={require("../images/Background.png")}></Image>
+                            </TouchableOpacity>
+                        <Text style={styles.text5}>Calender {"\n"} & {"\n"} Schedule</Text>
+                    </View>
+                <View>
+                <Image source={require("../images/Time.png")}></Image>
+                </View>
+                </View>
+            </ImageBackground>
+        </View>
+    )
 }
 
 export default Home
@@ -65,7 +84,13 @@ const styles = StyleSheet.create({
         marginBottom: 40,
         marginTop: 50,
         justifyContent: 'center',
-        marginLeft:125,
+        marginLeft: 125,
+    },
+    text: {
+        color: 'black',
+        fontSize: 18,
+        textAlign: 'left',
+        marginLeft: 40,
     },
     text1: {
         color: 'black',
@@ -80,40 +105,63 @@ const styles = StyleSheet.create({
         marginLeft: 40,
     },
     profile: {
-        width:80,
-        height:60,
-        position:'absolute',
-        right:40
+        width: 80,
+        height: 60,
+        position: 'absolute',
+        right: 40
     },
     text3: {
         color: 'black',
         fontSize: 18,
         textAlign: 'center',
         marginLeft: 40,
-        marginTop:-23,
+        marginTop: -23,
     },
-    onlinebtn:{
-        backgroundColor:'white',
-        height:80,
-        width:96,
-        borderRadius:5,
+    onlinebtn: {
+        backgroundColor: 'white',
+        height: 80,
+        width: 96,
+        borderRadius: 5,
         marginHorizontal: 15,
-        marginTop:15,
-        alignItems:'center'
+        marginTop: 15,
+        alignItems: 'center'
     },
-    view:{
-       alignItems:'center'
+    view: {
+        alignItems: 'center'
     },
-    progressbtn:{
-        backgroundColor:'white',
-        height:128,
-        width:142,
-        borderRadius:5,
+    text4: {
+        color: 'black',
+    },
+    Progresstn: {
+        backgroundColor: 'white',
+        height: 128,
+        width: 142,
+        borderRadius: 5,
         marginHorizontal: 15,
-        marginTop:60,
-        alignItems:'center'
+        marginTop: 60,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginLeft: 30,
     },
-
-    
-
+    Calendartn: {
+        height: 132,
+        width: 112,
+        borderRadius: 5,
+        marginHorizontal: 15,
+        marginTop: 60,
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginLeft: 30,
+    },
+    text5: {
+        color: 'black',
+        fontSize: 20,
+        textAlign: 'center',
+        marginLeft: 150,
+        marginTop: -110,
+    },
+    Image:{
+        marginLeft: 150,
+        marginTop: -1,
+    }
 })

@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity, TextI
 import axios from 'axios';
 import { useState } from 'react';
 
-  const [studentNumber, setStudentNumber] = react.useState('');
+  const [studentNumber, setStudentNumber] = React.useState('');
   const [studentName, setStudentName] = React.useState('');
   const [parentPhoneNumber, setParentPhoneNumber] = React.useState('');
 
@@ -33,18 +33,18 @@ const PaymentMethod = ({ navigation }) => {
     });
   }
 
-  const PayPalPayment = () =>{
-    const createPayment = async () => {
-        try {
-            const response = await axios.post ("http://192.168.1.10:3000/paypal");
-            const approvalURL = response.data.links.find(link => link.rel === "approval_url").href;
-            console.log(approvalURL)
-        } catch (error) {
-            console.error ("Error creating Paypal payment:", error);
-            Alert.alert('Error',)
-        }
-    }
-  } 
+  // const PayPalPayment = () =>{
+  //   const createPayment = async () => {
+  //       try {
+  //           const response = await axios.post ("http://192.168.1.10:3000/paypal");
+  //           const approvalURL = response.data.links.find(link => link.rel === "approval_url").href;
+  //           console.log(approvalURL)
+  //       } catch (error) {
+  //           console.error ("Error creating Paypal payment:", error);
+  //           Alert.alert('Error',)
+  //       }
+  //   }
+  // } 
 
   return (
     <View style={styles.container}>

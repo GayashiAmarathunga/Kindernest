@@ -41,9 +41,9 @@ const Login = ({ navigation }) => {
         <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.button}><Text style={{ fontSize: 20, padding: 10, textAlign: 'center', fontWeight: 'bold' }}>Login</Text></TouchableOpacity>
       </View>
       <View style={{ marginTop: 20, alignItems: 'center' }}>
-        <TouchableOpacity><Text style={{ fontSize: 20, padding: 10, textAlign: 'center', fontWeight: 'bold' }}>Forgot Password</Text></TouchableOpacity>
-        <Text>Don’t Have an account
-          <TouchableOpacity onPress={() => navigation.navigate('Pregister')} style={styles.button}><Text style={{ fontSize: 20, padding: 10, textAlign: 'center', fontWeight: 'bold' }}>Signup</Text></TouchableOpacity></Text>
+        <TouchableOpacity><Text style={{ fontSize: 20, padding: 5, textAlign: 'center', fontWeight: 'bold' }}>Forgot Password</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Pregister')} style={styles.button}><Text style={{ fontSize: 20, padding: 10, textAlign: 'center', fontWeight: 'bold', }}>Signup</Text></TouchableOpacity>
+        <TouchableOpacity><Text style={{ fontSize: 15, padding: 5, textAlign: 'center', fontWeight: 'bold',color: 'black', }}>Don't have an account</Text></TouchableOpacity>
       </View>
     </View>
   )
@@ -95,5 +95,5 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     width: 'auto',
     alignSelf: 'center',
-  }
+  },
 })

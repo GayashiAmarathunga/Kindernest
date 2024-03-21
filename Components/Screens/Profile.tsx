@@ -10,9 +10,7 @@ const Profile = () => {
             </View>
             <View>
                 <TouchableOpacity style={styles.btnleft}><Text style={styles.btntext}>Edit Profile</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.btnright}><Text style={styles.btntext}>Help & Support</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.btnleft}><Text style={styles.btntext}>Contact Us</Text></TouchableOpacity>
-                <TouchableOpacity style={styles.btnright}><Text style={styles.btntext}>Settings</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.btnright}><Text style={styles.btntext}>Contact Us</Text></TouchableOpacity>
                 <TouchableOpacity style={styles.btnleft}><Text style={styles.btntext}>About Us</Text></TouchableOpacity>
             </View>
         </View>
@@ -31,7 +29,7 @@ const styles = StyleSheet.create({
     },
     wrapper: {
         alignSelf: 'center',
-        width: 385,
+        width: 415,
         borderRadius: 5,
         backgroundColor: '#944CC0',
         height: 100,

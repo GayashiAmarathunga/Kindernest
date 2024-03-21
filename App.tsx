@@ -12,13 +12,17 @@ import OnlineClass from './Components/Screens/OnlineClass';
 import Routing from './Routing';
 import Profile from './Components/Screens/Profile';
 import Teacher from './Components/Screens/Teacher';
-import Process from './Components/Screens/Process';
+import Contactus from './Components/Screens/Contactus';
 
 
 const App = () => {
   return(
+<<<<<<< HEAD
     <PaymentMethod
     />
+=======
+    <Profile/>
+>>>>>>> 78737137eaf5da1b8e11eeb5b64db7870e937823
   );
 }
 

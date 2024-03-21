@@ -10,7 +10,7 @@ const ParentSignup = ({navigation}) => {
       <TextInput style={styles.input}></TextInput>
       <Text style={styles.text}>Child Name</Text>
       <TextInput style={styles.input}></TextInput>
-      <Text style={styles.text}>Kindergarten Name </Text>
+      <Text style={styles.text}>Kindergarten Level </Text>
       <TextInput style={styles.input}></TextInput>
       <Text style={styles.text}>Class</Text>
       <TextInput style={styles.input}></TextInput>
@@ -48,7 +48,9 @@ const styles = StyleSheet.create({
         color: 'black',
         fontSize: 16,
         textAlign: 'left',
-        marginLeft: 30,
+        marginLeft: 40,
+        marginBottom: -2,
+        
     },
     input: {
         borderColor: 'rgba(145, 0, 235, 1)',

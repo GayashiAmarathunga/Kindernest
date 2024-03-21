@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,ImageBackground,Image } from 'react-native'
+import { StyleSheet, Text, View,ImageBackground,Image,TouchableOpacity } from 'react-native'
 import React from 'react'
 
 const Home = () => {
@@ -14,6 +14,34 @@ const Home = () => {
         <View>
         <Text style={styles.text3}>Quick Actions</Text>   
         </View>
+         <View style={{flexDirection:'row'}}> 
+            <View style={styles.view}>
+            <TouchableOpacity style={styles.onlinebtn}>
+            <Image source={require("../images/Classroom.png")}></Image>
+            </TouchableOpacity>
+            <Text style={styles.text}>Online Classes</Text>
+            </View>
+            <View style={styles.view}>
+            <TouchableOpacity style={styles.onlinebtn}>
+            <Image source={require("../images/Homeworks.png")}></Image>
+            </TouchableOpacity>
+            <Text style={styles.text}>Online Classes</Text>
+            </View>
+            <View style={styles.view}>
+            <TouchableOpacity style={styles.onlinebtn}>
+            <Image source={require("../images/Activities.png")}></Image>
+            </TouchableOpacity>
+            <Text style={styles.text}>Online Classes</Text>
+            </View>
+            </View>
+            <View style={{flexDirection:'row'}}></View>
+            <TouchableOpacity style={styles.progressbtn}>
+            <Image style={{alignSelf:'center',}} source={require("../images/Progress.png")}></Image>
+             
+            </TouchableOpacity>
+        <View>
+        </View>
+
      </ImageBackground>
     </View>
   )
@@ -38,12 +66,6 @@ const styles = StyleSheet.create({
         marginTop: 50,
         justifyContent: 'center',
         marginLeft:125,
-    },
-    text: {
-        color: 'black',
-        fontSize: 15,
-        textAlign: 'left',
-        marginLeft: 40,
     },
     text1: {
         color: 'black',
@@ -70,5 +92,28 @@ const styles = StyleSheet.create({
         marginLeft: 40,
         marginTop:-23,
     },
+    onlinebtn:{
+        backgroundColor:'white',
+        height:80,
+        width:96,
+        borderRadius:5,
+        marginHorizontal: 15,
+        marginTop:15,
+        alignItems:'center'
+    },
+    view:{
+       alignItems:'center'
+    },
+    progressbtn:{
+        backgroundColor:'white',
+        height:128,
+        width:142,
+        borderRadius:5,
+        marginHorizontal: 15,
+        marginTop:60,
+        alignItems:'center'
+    },
+
     
+
 })

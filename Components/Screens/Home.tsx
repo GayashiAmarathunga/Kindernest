@@ -70,4 +70,5 @@ const styles = StyleSheet.create({
         marginLeft: 40,
         marginTop:-23,
     },
+    
 })

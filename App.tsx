@@ -17,7 +17,8 @@ import Process from './Components/Screens/Process';
 
 const App = () => {
   return(
-    <process/>
+    <PaymentMethod
+    />
   );
 }
 

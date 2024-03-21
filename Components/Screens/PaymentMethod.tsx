@@ -1,137 +1,147 @@
-import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, TextInput } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { StyleSheet, Text, View, ImageBackground, Image, TouchableOpacity, TextInput } from 'react-native';
+import axios from 'axios';
+import { useState } from 'react';
 
-const PaymentMethod = () => {
+  const [studentNumber, setStudentNumber] = react.useState('');
+  const [studentName, setStudentName] = React.useState('');
+  const [parentPhoneNumber, setParentPhoneNumber] = React.useState('');
+
+const PaymentMethod = ({ navigation }) => {
+    
+  const proceedHandle = () => {
+
+    if (!studentName){
+        console.error("Please enter student number");
+        return;
+    }
+
+    axios.post("http://192.168.1.10:3000/PaymentDetails", {
+      id: studentNumber,
+      name: studentName,
+      mobile: parentPhoneNumber
+    })
+    .then(response => {
+      
+      console.log(response.data);
+      
+      navigation.navigate('Process');
+    })
+    .catch(error => {
+      
+      console.error('Error:', error);
+    });
+  }
+
+  const PayPalPayment = () =>{
+    const createPayment = async () => {
+        try {
+            const response = await axios.post ("http://192.168.1.10:3000/paypal");
+            const approvalURL = response.data.links.find(link => link.rel === "approval_url").href;
+            console.log(approvalURL)
+        } catch (error) {
+            console.error ("Error creating Paypal payment:", error);
+            Alert.alert('Error',)
+        }
+    }
+  } 
+
   return (
     <View style={styles.container}>
-        <ImageBackground source={require('../images/Payments.png')} resizeMode="cover" style={styles.image}>
-     <Text style={styles.textheading}>Payment Method</Text>
-     <Text style={styles.text}>Pay with Paypal</Text>
-     <Text style={styles.text1}>Pay with credit or debit card</Text>
-     <TextInput style={styles.input}placeholderTextColor={'black'} placeholder='Card Number*'></TextInput>
-     <TextInput style={styles.input1}placeholderTextColor={'black'} placeholder='MM*'></TextInput>
-     <TextInput style={styles.input2}placeholderTextColor={'black'} placeholder='YY*'></TextInput>
-     <TextInput style={styles.input3}placeholderTextColor={'black'} placeholder='CVV / CVC*'></TextInput>
-     <TextInput style={styles.input4}placeholderTextColor={'black'} placeholder='First Name*'></TextInput>
-     <TextInput style={styles.input5}placeholderTextColor={'black'} placeholder='Last Name*'></TextInput>
-     </ImageBackground>
-     
-
+      <ImageBackground source={require('../images/Blank.png')} resizeMode="cover" style={styles.image}>    
+        <Text style={styles.textheading}>Make your class payments</Text>
+        <Image style={styles.paymentlady} source={require("../images/paymentlady.png")} />
+        <TextInput
+          style={styles.input}
+          placeholderTextColor={'black'}
+          placeholder='Student Number'
+          value={studentNumber}
+          onChangeText={setStudentNumber}
+        />
+        <TextInput
+          style={styles.input2}
+          placeholderTextColor={'black'}
+          placeholder='Student Name'
+          value={studentName}
+          onChangeText={setStudentName}
+        />
+        <TextInput
+          style={styles.input3}
+          placeholderTextColor={'black'}
+          placeholder='Parent Phone Number'
+          value={parentPhoneNumber}
+          onChangeText={setParentPhoneNumber}
+        />
+        <TouchableOpacity onPress={proceedHandle} style={styles.button}>
+          <Text style={{ fontSize: 20, padding: 10, textAlign: 'center', fontWeight: 'bold', color: 'white' }}>Proceed with PayPal</Text>
+        </TouchableOpacity>
+      </ImageBackground>
     </View>
-  )
+  );
 }
 
-export default PaymentMethod
-
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    image: {
-        flex: 1
-    },
-    textheading: {
-        fontSize: 26,  
-        color: 'black',
-        marginTop: 40,
-        marginBottom: 20,
-        textAlign: 'center',
-        fontWeight: 'bold',
-    },
-    text: {
-        color: 'black',
-        fontSize: 16,
-        textAlign: 'center',
-        marginLeft: 80,
-        marginTop: 17,
-    },
-    text1: {
-        color: 'black',
-        fontSize: 16,
-        textAlign: 'center',
-        marginRight: 50,
-        marginTop: 80,
-    },
-    input: {
-        borderWidth: 1,
-        width: 340,
-        marginLeft: 22,
-        borderRadius: 5,
-        backgroundColor: '#B7ADAD',
-        color: 'black',
-        paddingLeft: 20,
-        marginBottom: 10,
-        height:40,
-        marginBottom:40,
-        marginTop: 80,
-    },
-    input1: {
-        borderWidth: 1,
-        width: 80,
-        marginLeft: 22,
-        borderRadius: 5,
-        backgroundColor: '#B7ADAD',
-        color: 'black',
-        paddingLeft: 20,
-        marginBottom: 10,
-        height:40,
-        marginBottom:40,
-        marginTop: -10,
-    },
-    input2: {
-        borderWidth: 1,
-        width: 80,
-        marginLeft: 120,
-        borderRadius: 5,
-        backgroundColor: '#B7ADAD',
-        color: 'black',
-        paddingLeft: 20,
-        marginBottom: 10,
-        height:40,
-        marginBottom:40,
-        marginTop: -80,
-        
-    },
-    input3: {
-        borderWidth: 1,
-        width: 140,
-        marginLeft: 225,
-        borderRadius: 5,
-        backgroundColor: '#B7ADAD',
-        color: 'black',
-        paddingLeft: 20,
-        marginBottom: 10,
-        height:40,
-        marginBottom:40,
-        marginTop: -80,
-    },
-    input4: {
-        borderWidth: 1,
-        width: 340,
-        marginLeft: 22,
-        borderRadius: 5,
-        backgroundColor: '#B7ADAD',
-        color: 'black',
-        paddingLeft: 20,
-        marginBottom: 10,
-        height:40,
-        marginBottom:40,
-        marginTop: -10,
-    },
-    input5: {
-        borderWidth: 1,
-        width: 340,
-        marginLeft: 22,
-        borderRadius: 5,
-        backgroundColor: '#B7ADAD',
-        color: 'black',
-        paddingLeft: 20,
-        marginBottom: 10,
-        height:40,
-        marginBottom:40,
-        marginTop: -10,
-    },
-    
-    
-    
-    })
+  container: {
+    flex: 1,
+  },
+  image: {
+    flex: 1
+  },
+  textheading: {
+    fontSize: 26,  
+    color: 'black',
+    marginTop: 40,
+    textAlign: 'center',
+    fontWeight: 'bold',  
+  },
+  input: {
+    borderWidth: 1,
+    width: 340,
+    marginLeft: 22,
+    borderRadius: 5,
+    backgroundColor: '#B7ADAD',
+    color: 'black',
+    paddingLeft: 20,
+    height: 40,
+    marginBottom: 40,
+    marginTop: 15,
+  },
+  input2: {
+    borderWidth: 1,
+    width: 340,
+    marginLeft: 22,
+    borderRadius: 5,
+    backgroundColor: '#B7ADAD',
+    color: 'black',
+    paddingLeft: 20,
+    height: 40,
+    marginBottom: 40,
+    marginTop: -10,
+  },
+  input3: {
+    borderWidth: 1,
+    width: 340,
+    marginLeft: 22,
+    borderRadius: 5,
+    backgroundColor: '#B7ADAD',
+    color: 'black',
+    paddingLeft: 20,
+    height: 40,
+    marginBottom: 40,
+    marginTop: -10,
+  },
+  paymentlady: {
+    height: 250,
+    width: 350,
+    alignSelf: "center",
+    marginTop: 10,
+  },
+  button: {
+    backgroundColor: 'rgba(3, 138, 255, 1)',
+    borderRadius: 50,
+    width: 'auto',
+    alignSelf: 'center',
+  },  
+});
+
+export default PaymentMethod;

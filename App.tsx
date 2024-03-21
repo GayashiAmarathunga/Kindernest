@@ -17,7 +17,7 @@ import Contactus from './Components/Screens/Contactus';
 
 const App = () => {
   return(
-    <Contactus/>
+    <Profile/>
   );
 }
 

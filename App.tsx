@@ -12,13 +12,15 @@ import OnlineClass from './Components/Screens/OnlineClass';
 import Routing from './Routing';
 import Profile from './Components/Screens/Profile';
 import Teacher from './Components/Screens/Teacher';
-import Process from './Components/Screens/Process';
-import Calender from './Components/Screens/Calender/Calender';
+import Contactus from './Components/Screens/Contactus';
+import Home from './Components/Screens/Home';
+import Homeparent from './Components/Screens/Homeparent';
 
-// app
+
 const App = () => {
-  // return <Process />;
-  return <Calender />;
-};
+  return(
+    <Homeparent/>
+  );
+}
 
 export default App;

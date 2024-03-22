@@ -1,13 +1,26 @@
 import { StyleSheet, Text, View, ImageBackground, TextInput, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { OtpInput } from "react-native-otp-entry";
 
 const Verification = () => {
+    const [message, setMessage] = useState('');
+
+    useEffect(() => {
+        fetch('http://10.0.2.2:3000/')
+            .then(response => response.text())
+            .then(data => {
+                setMessage(data);
+            })
+            .catch(error => {
+                console.error('There was an error fetching the message:', error);
+            });
+    }, []);
     return (
         <View style={styles.container}>
             <ImageBackground source={require('../images/Verification.png')} resizeMode="cover" style={styles.image}>
                 <Text style={styles.textheading}>Verification</Text>
                 <Text style={styles.text}>Enter the Verification code</Text>
+                <Text style={styles.text}>{message}</Text> 
                 <OtpInput
                     numberOfDigits={4}
                     focusStickBlinkingDuration={500}
@@ -17,7 +30,7 @@ const Verification = () => {
                     theme={{
                         containerStyle: styles.pin,
                         pinCodeTextStyle: styles.pinCodeText,
-                       }}/>
+                    }} />
                 <TouchableOpacity style={styles.button}><Text style={{ fontSize: 20, padding: 10, textAlign: 'center', fontWeight: 'bold' }}>confirm</Text></TouchableOpacity>
 
             </ImageBackground>
@@ -40,10 +53,10 @@ const styles = StyleSheet.create({
         marginLeft: 30,
         color: 'black',
         marginTop: 140,
-        marginBottom: 20,
+        marginBottom: 40,
         textAlign: 'center',
         fontWeight: 'bold',
-        marginBottom: 40
+       
     },
     text: {
         color: 'black',
@@ -58,13 +71,13 @@ const styles = StyleSheet.create({
         width: 'auto',
         alignSelf: 'center',
     },
-    pin:{
-        width:300,
-        alignSelf:'center',
-        marginBottom:40,
-        marginTop:20
+    pin: {
+        width: 300,
+        alignSelf: 'center',
+        marginBottom: 40,
+        marginTop: 20
     },
-    pinCodeText:{
-        color:'rgba(145, 0, 235, 1)'
+    pinCodeText: {
+        color: 'rgba(145, 0, 235, 1)'
     }
 })

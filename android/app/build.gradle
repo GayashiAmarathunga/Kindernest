@@ -102,6 +102,18 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+    sourceSets {
+        main {
+            assets {
+                // Include the fonts directory
+                srcDirs += ["src/main/assets/fonts"]
+            }
+        }
+    }
+
+}
+
+
 }
 
 dependencies {

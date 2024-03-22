@@ -58,7 +58,7 @@ const Home = () => {
                         <Text style={styles.text5}>Calender {"\n"} & {"\n"} Schedule</Text>
                     </View>
                 <View>
-                    <Image source={require("../images/Schedule.png")}></Image>
+                <Image style={styles.Scheduleimage} source={require("../images/Schedule.png")}></Image>
                 </View>
                 </View>
             </ImageBackground>
@@ -142,6 +142,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginLeft: 30,
+        borderRadius: 20,
     },
     Calendartn: {
         height: 132,
@@ -152,6 +153,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginLeft: 30,
+        borderRadius: 20,
     },
     text5: {
         color: 'black',
@@ -160,8 +162,11 @@ const styles = StyleSheet.create({
         marginLeft: 150,
         marginTop: -110,
     },
-    Schedule:{
-        marginLeft: 150,
-        marginTop: -100,
-    }
+    Scheduleimage: {
+        position: 'absolute',
+        marginLeft: 50,
+        width: 100,
+        height: 100,
+        marginTop: -70,
+    },
 })

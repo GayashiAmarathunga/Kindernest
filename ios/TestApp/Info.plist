@@ -26,7 +26,10 @@
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
+<<<<<<< HEAD
+=======
 	  <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
+>>>>>>> origin/master
 		<key>NSAllowsArbitraryLoads</key>
 		<false/>
 		<key>NSAllowsLocalNetworking</key>

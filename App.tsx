@@ -12,11 +12,11 @@ import Routing from './Routing';
 import Profile from './Components/Screens/Profile';
 import Home from './Components/Screens/Home';
 import Homeparent from './Components/Screens/Homeparent';
-
+import Calendar from './Components/Screens/Calender/Calender';
 
 const App = () => {
   return(
-    <Routing/>
+    <Verification/>
   );
 }
 

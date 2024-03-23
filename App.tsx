@@ -19,7 +19,7 @@ import Homeparent from './Components/Screens/Homeparent';
 
 const App = () => {
   return(
-    <Profile/>
+    <Home/>
   );
 }
 

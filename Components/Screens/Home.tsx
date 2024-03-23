@@ -48,18 +48,16 @@ const Home = () => {
                         </TouchableOpacity>
                         <Text style={styles.text4}>Emergency Alerts</Text>
                     </View>
-                    </View>
+                </View>
                 <View>
 
-                    <View style={styles.view}>
+                    <View style={styles.view1}>
                         <TouchableOpacity style={styles.Calendartn}>
-                            <Image source={require("../images/Background.png")}></Image>
-                            </TouchableOpacity>
-                        <Text style={styles.text5}>Calender {"\n"} & {"\n"} Schedule</Text>
+                            <Image style={{ position: 'absolute', left: -30, width: 340, height: 180, top: -60 }} source={require("../images/Rectangle.png")}></Image>
+                            <Text style={styles.text5}>Calender {"\n"} & {"\n"} Schedule</Text>
+                            <Image style={styles.Openbookimage} source={require("../images/Schedule.png")}></Image>
+                        </TouchableOpacity>
                     </View>
-                <View>
-                <Image style={styles.Scheduleimage} source={require("../images/Schedule.png")}></Image>
-                </View>
                 </View>
             </ImageBackground>
         </View>
@@ -169,4 +167,24 @@ const styles = StyleSheet.create({
         height: 100,
         marginTop: -70,
     },
+    view1: {
+        marginTop: 30,
+        marginLeft: 20,
+        marginRight: 20,
+    },
+    text5: {
+        color: 'black',
+        fontSize: 20,
+        textAlign: 'center',
+        left: 20,
+        bottom: 40
+    },
+    Openbookimage: {
+        position: 'absolute',
+        left: 200,
+        width: 100,
+        height: 100,
+        marginTop: -70,
+        bottom: 50
+    }
 })

@@ -51,15 +51,14 @@ const Homeparent = () => {
                     </View>
                 <View>
 
-                    <View style={styles.view}>
+                    <View style={styles.view1}>
                         <TouchableOpacity style={styles.Calendartn}>
-                            <Image source={require("../images/Rectangle.png")}></Image>
+                        <Image style={{position:'absolute', left:-30, width:340, height:180, top:-60}} source={require("../images/Rectangle.png")}></Image>
+                            <Text style={styles.text5}>AI {"\n"}STORY TELLING</Text>
+                            <Image style={styles.Openbookimage} source={require("../images/Openbook.png")}></Image>
                             </TouchableOpacity>
-                        <Text style={styles.text5}>AI {"\n"}{"\n"} STORY TELLING</Text>
+                        
                     </View>
-                <View>
-                <Image style={styles.Openbookimage} source={require("../images/Openbook.png")}></Image>
-                </View>
                 </View>
             </ImageBackground>
         </View>
@@ -130,6 +129,11 @@ const styles = StyleSheet.create({
         view: {
             alignItems: 'center'
         },
+        view1: {
+            marginTop:30,
+            marginLeft:20,
+            marginRight:20,
+        },
         text4: {
             color: 'black',
         },
@@ -159,14 +163,15 @@ const styles = StyleSheet.create({
             color: 'black',
             fontSize: 20,
             textAlign: 'center',
-            marginRight: 140,
-            marginTop: -110,
+            left:20,
+            bottom:40
         },
         Openbookimage: {
             position: 'absolute',
-            right: 50,
+            left: 200,
             width: 100,
             height: 100,
             marginTop: -70,
+            bottom:50
         }
 })

@@ -18,7 +18,7 @@ import Homeparent from './Components/Screens/Homeparent';
 import Calendar from './Components/Screens/Calender/Calender';
 
 const App = () => {
-  return <Calendar />;
+  return <Home />;
 };
 
 export default App;

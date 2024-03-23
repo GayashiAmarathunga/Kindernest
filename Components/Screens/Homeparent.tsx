@@ -29,9 +29,9 @@ const Homeparent = () => {
                     </View>
                     <View style={styles.view}>
                         <TouchableOpacity style={styles.onlinebtn}>
-                            <Image source={require("../images/Activities.png")}></Image>
+                            <Image source={require("../images/Chat.png")}></Image>
                         </TouchableOpacity>
-                        <Text style={styles.text4}>Activities</Text>
+                        <Text style={styles.text4}>Chats</Text>
                     </View>
                 </View>
 
@@ -51,15 +51,14 @@ const Homeparent = () => {
                     </View>
                 <View>
 
-                    <View style={styles.view}>
+                    <View style={styles.view1}>
                         <TouchableOpacity style={styles.Calendartn}>
-                            <Image source={require("../images/Background.png")}></Image>
+                        <Image style={{position:'absolute', left:-30, width:340, height:180, top:-60}} source={require("../images/Rectangle.png")}></Image>
+                            <Text style={styles.text5}>AI {"\n"}STORY TELLING</Text>
+                            <Image style={styles.Openbookimage} source={require("../images/Openbook.png")}></Image>
                             </TouchableOpacity>
-                        <Text style={styles.text5}>Calender {"\n"} & {"\n"} Schedule</Text>
+                        
                     </View>
-                <View>
-                    <Image source={require("../images/Schedule.png")}></Image>
-                </View>
                 </View>
             </ImageBackground>
         </View>
@@ -108,7 +107,7 @@ const styles = StyleSheet.create({
             width: 80,
             height: 60,
             position: 'absolute',
-            right: 40
+            right: 40,
         },
         text3: {
             color: 'black',
@@ -124,10 +123,16 @@ const styles = StyleSheet.create({
             borderRadius: 5,
             marginHorizontal: 15,
             marginTop: 15,
-            alignItems: 'center'
+            alignItems: 'center',
+            borderRadius: 20,
         },
         view: {
             alignItems: 'center'
+        },
+        view1: {
+            marginTop:30,
+            marginLeft:20,
+            marginRight:20,
         },
         text4: {
             color: 'black',
@@ -142,6 +147,7 @@ const styles = StyleSheet.create({
             alignItems: 'center',
             justifyContent: 'center',
             marginLeft: 30,
+            borderRadius: 20,
         },
         Calendartn: {
             height: 132,
@@ -157,11 +163,15 @@ const styles = StyleSheet.create({
             color: 'black',
             fontSize: 20,
             textAlign: 'center',
-            marginLeft: 150,
-            marginTop: -110,
+            left:20,
+            bottom:40
         },
-        Schedule:{
-            marginLeft: 150,
-            marginTop: -100,
-        },
+        Openbookimage: {
+            position: 'absolute',
+            left: 200,
+            width: 100,
+            height: 100,
+            marginTop: -70,
+            bottom:50
+        }
 })

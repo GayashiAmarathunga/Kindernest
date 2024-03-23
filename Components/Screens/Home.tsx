@@ -153,13 +153,6 @@ const styles = StyleSheet.create({
         marginLeft: 30,
         borderRadius: 20,
     },
-    text5: {
-        color: 'black',
-        fontSize: 20,
-        textAlign: 'center',
-        marginLeft: 150,
-        marginTop: -110,
-    },
     Scheduleimage: {
         position: 'absolute',
         marginLeft: 50,
@@ -186,5 +179,5 @@ const styles = StyleSheet.create({
         height: 100,
         marginTop: -70,
         bottom: 50
-    }
+    },
 })

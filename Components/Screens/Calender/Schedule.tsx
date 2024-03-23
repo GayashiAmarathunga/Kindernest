@@ -67,14 +67,14 @@ const Schedule: React.FC<{
       </View>
 
       {/* Area to view classes or tasks */}
-      <ScrollView style={styles.scheduleArea}>
+      <View style={styles.scheduleArea}>
         {/* conditional rendering based on activeTab */}
         {activeTab === 'classes' ? (
           <ClassSchedule day={day} />
         ) : (
-          <TasksSchedule />
+          <TasksSchedule day={day} />
         )}
-      </ScrollView>
+      </View>
     </View>
   );
 };
@@ -109,7 +109,8 @@ const styles = StyleSheet.create({
   },
   scheduleTabsContainer: {
     width: '100%',
-    maxHeight: '15%',
+    height: '10%',
+    minHeight: '5%',
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
@@ -122,9 +123,11 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Medium',
     fontSize: 12,
     color: '#751695',
+  },
+  scheduleArea: {
     // borderColor: 'blue',
     // borderStyle: 'solid',
     // borderWidth: 1,
+    width: '100%',
   },
-  scheduleArea: {},
 });

@@ -15,12 +15,10 @@ import Teacher from './Components/Screens/Teacher';
 import Contactus from './Components/Screens/Contactus';
 import Home from './Components/Screens/Home';
 import Homeparent from './Components/Screens/Homeparent';
-
+import Calendar from './Components/Screens/Calender/Calender';
 
 const App = () => {
-  return(
-    <Homeparent/>
-  );
-}
+  return <Calendar />;
+};
 
 export default App;

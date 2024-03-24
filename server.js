@@ -5,8 +5,8 @@ import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 
+import ScheduleEvent from "./models/scheduleEventModel.js";
 import scheduleRoutes from "./routes/scheduleRoutes.js";
-// import childRoutes from "./routes/childRoutes.js";
 
 const app = express();
 const PORT = 5000;
@@ -24,11 +24,13 @@ app.get("/", (req, res) => {
 
 app.get("/schedules", scheduleRoutes);
 
-// app.use("/children", childRoutes);
+app.get("/schedules/:id", scheduleRoutes);
+
+app.post("/schedules", scheduleRoutes);
 
 // connect to db
 mongoose
-  .connect(process.env.MONG_URI)
+  .connect(process.env.MONG_URI, { dbName: "KinderNest" })
   .then(() => {
     app.listen(PORT, () =>
       console.log(

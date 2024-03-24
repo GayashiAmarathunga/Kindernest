@@ -5,14 +5,14 @@ import mongoose from "mongoose";
 //   events: [String],
 // });
 
-const scheduleEventsSchema = new mongoose.Schema(
+const scheduleEventSchema = new mongoose.Schema(
   {
     date: {
       type: String,
       required: [true, "please enter date"],
     },
     events: {
-      type: String,
+      type: [String],
       required: [true, "Please enter events list"],
     },
   },
@@ -21,6 +21,6 @@ const scheduleEventsSchema = new mongoose.Schema(
   }
 );
 
-const ScheduleEvents = mongoose.model("ScheduleEvents", scheduleEventsSchema);
+const ScheduleEvent = mongoose.model("ScheduleEvent", scheduleEventSchema);
 
-export default ScheduleEvents;
+export default ScheduleEvent;

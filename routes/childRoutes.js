@@ -1,16 +1,16 @@
-import express from "express";
-import {
-  deleteChild,
-  getChild,
-  getChildren,
-} from "../controllers/childController.js";
+// import express from "express";
+// import {
+//   deleteChild,
+//   getChild,
+//   getChildren,
+// } from "../controllers/childController.js";
 
-const router = express.Router();
+// const router = express.Router();
 
-router.get("/", getChildren);
+// router.get("/", getChildren);
 
-router.get("/:id", getChild);
+// router.get("/:id", getChild);
 
-router.delete("/:id", deleteChild);
+// router.delete("/:id", deleteChild);
 
-export default router;
+// export default router;

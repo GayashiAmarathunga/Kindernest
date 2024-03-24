@@ -1,10 +1,5 @@
 import mongoose from "mongoose";
 
-// const scheduleSchema = new mongoose.Schema({
-//   date: String,
-//   events: [String],
-// });
-
 const scheduleEventSchema = new mongoose.Schema(
   {
     date: {

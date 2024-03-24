@@ -3,14 +3,16 @@ dotenv.config();
 
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors";
 import bodyParser from "body-parser";
 
-import ScheduleEvent from "./models/scheduleEventModel.js";
 import scheduleRoutes from "./routes/scheduleRoutes.js";
+import taskRoutes from "./routes/taskRoutes.js";
 
 const app = express();
 const PORT = 5000;
 
+app.use(cors());
 app.use(bodyParser.json());
 
 app.use((err, req, res, next) => {
@@ -22,11 +24,34 @@ app.get("/", (req, res) => {
   res.send("server running");
 });
 
+// Schedules
+
+// get all schedule events
 app.get("/schedules", scheduleRoutes);
 
+// get a event schedule by id
 app.get("/schedules/:id", scheduleRoutes);
 
+// add a schedule event
 app.post("/schedules", scheduleRoutes);
+
+// update a schedule event by id
+app.put("/schedules/:id", scheduleRoutes);
+
+// delete a schedule event by id
+app.delete("/schedules/:id", scheduleRoutes);
+
+// Tasks
+
+app.get("/tasks", taskRoutes);
+
+app.get("/tasks/:id", taskRoutes);
+
+app.post("/tasks", taskRoutes);
+
+app.put("/tasks/:id", taskRoutes);
+
+app.delete("/tasks/:id", taskRoutes);
 
 // connect to db
 mongoose
@@ -41,14 +66,3 @@ mongoose
   .catch((error) => {
     console.log(error);
   });
-
-// async function dropCollection() {
-//   try {
-//     await mongoose.connection.db.dropCollection("scheduleData");
-//     console.log("Collection dropped successfully.");
-//   } catch (error) {
-//     console.error("Error dropping collection:", error);
-//   } finally {
-//     mongoose.connection.close();
-//   }
-// }

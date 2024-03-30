@@ -15,6 +15,7 @@ import Home from './Components/Screens/Home';
 import Homeparent from './Components/Screens/Homeparent';
 import { Drawer } from 'react-native-paper';
 import StoryScreen from './Components/Screens/StoryScreen';
+import Icon from 'react-native-vector-icons/Entypo';
 
 const StackNav = () => {
   const stack = createNativeStackNavigator();

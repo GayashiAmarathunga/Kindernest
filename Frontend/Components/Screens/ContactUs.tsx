@@ -93,3 +93,12 @@ const Contactus = () => {
           borderRadius: 5,
           height: 280,
           }}>
+
+<Text style={{
+            fontSize: 20,
+            marginLeft: 30,
+            marginTop: 35,
+            fontWeight: 'bold',
+        }}> 
+            INFO
+        </Text>

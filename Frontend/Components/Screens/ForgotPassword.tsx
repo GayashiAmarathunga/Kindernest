@@ -33,3 +33,23 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
         marginBottom:40
     },
+    text: {
+        color: 'black',
+        fontSize: 16,
+        textAlign: 'left',
+        marginLeft: 30,
+        marginBottom:20
+    },
+    input: {
+        borderColor: 'rgba(145, 0, 235, 1)',
+        borderWidth: 1,
+        width: 300,
+        marginLeft: 30,
+        borderRadius: 30,
+        backgroundColor: 'white',
+        color: 'black',
+        paddingLeft: 20,
+        marginBottom: 10,
+        height:40,
+        marginBottom:40
+    },

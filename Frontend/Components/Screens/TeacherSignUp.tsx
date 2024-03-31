@@ -68,3 +68,17 @@ return (
             value={email}
             onChangeText={setEmail}
           />
+           <Text style={styles.text}>Password</Text>
+          <TextInput
+            style={styles.input}
+            value={password}
+            onChangeText={setPassword}
+            secureTextEntry
+          />
+          <Text style={styles.text}>Confirm Password</Text> 
+          <TextInput
+            style={styles.input}
+            value={confirmPassword}
+            onChangeText={setConfirmPassword}
+            secureTextEntry
+          />

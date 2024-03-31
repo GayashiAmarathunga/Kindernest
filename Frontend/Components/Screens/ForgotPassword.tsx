@@ -53,3 +53,10 @@ const styles = StyleSheet.create({
         height:40,
         marginBottom:40
     },
+    button: {
+        backgroundColor:'rgba(145, 0, 235, 1)',
+        borderRadius:50,
+        width:'auto',
+        alignSelf:'center',
+    },
+})

@@ -66,3 +66,22 @@ const Contactus = () => {
             backgroundColor: '#D9D9D9',
           }}
         />
+
+<TouchableOpacity
+          style={{
+            alignSelf: 'center',
+            marginTop: 20,
+            backgroundColor: '#837785',
+            borderRadius: 5,
+            width: 109,
+            height: 39,
+          }}>
+          <Text style={{
+            textAlign: 'center',
+             fontSize: 16,
+              marginTop: 8
+              }}>
+            send
+          </Text>
+        </TouchableOpacity>
+      </View>

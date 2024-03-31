@@ -172,7 +172,7 @@ app.get("/paypal", async (req, res) => {
             }
         ]
     };
-    
+
     paypal.payment.create(create_payment_json, async function (error, payment) {
         if (error) {
             throw error;
@@ -191,3 +191,19 @@ app.get("/paypal", async (req, res) => {
         }
     });
 });
+
+app.get("/success", (req, res) => {
+    // res.send("Success");
+    var PayerID = req.query.PayerID;
+    var paymentId = req.query.paymentId;
+    var execute_payment_json = {
+        payer_id: PayerID,
+        transactions: [
+            {
+                amount: {
+                    currency: "USD",
+                    total: "1.00"
+                }
+            }
+        ]
+    };

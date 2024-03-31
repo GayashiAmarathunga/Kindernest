@@ -343,3 +343,83 @@ app.get('/progress/:studentEmail/recent', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
+
+app.post('/mailTeacher', (req, res) => {
+    const { to, replyTo, text } = req.body;
+
+    const mailOptions = {
+        from: `"Kinder Nest" <${gmailEmail}>`,
+        to: to,
+        subject: 'Message from KinderNest',
+        text: text,
+        replyTo: replyTo,
+    };
+
+    // Send mail with defined transport object
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+            res.status(500).send('Error sending email');
+        } else {
+            console.log('Message sent: %s', info.messageId);
+            res.status(200).send('Email sent successfully');
+        }
+    });
+});
+
+
+app.post('/schedule', async (req, res) => {
+    try {
+        await dbConnect();
+        const entry = new ScheduleEntry(req.body);
+        await entry.save();
+        res.status(201).send(entry);
+    } catch (error) {
+        res.status(400).send(error);
+    }
+});
+
+
+app.get('/schedule/:userEmail', async (req, res) => {
+    try {
+        await dbConnect();
+        const entries = await ScheduleEntry.find({ userEmail: req.params.userEmail });
+        res.send(entries);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
+app.get('/schedule/:email/:date', async (req, res) => {
+    const { email, date } = req.params;
+    const startDate = new Date(date);
+    const endDate = new Date(date);
+  
+    // Ensure we cover the whole day from 00:00:00 to 23:59:59
+    startDate.setHours(0, 0, 0, 0);
+    endDate.setHours(23, 59, 59, 999);
+  
+    try {
+      const events = await ScheduleEntry.find({
+        userEmail: email,
+        date: { $gte: startDate, $lte: endDate },
+        type: 'class'
+      });
+  
+      const tasks = await ScheduleEntry.find({
+        userEmail: email,
+        date: { $gte: startDate, $lte: endDate },
+        type: 'task'
+      });
+  
+      res.json({ events, tasks });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Error fetching schedule entries');
+    }
+  });
+  
+
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
+});

@@ -44,3 +44,8 @@ const OnlineClassChild = () => {
 
     fetchClasses();
   }, [session]);
+
+  const formatDate = (dateString:any) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString(); // Format the date according to the user's locale
+  };

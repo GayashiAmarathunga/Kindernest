@@ -12,3 +12,16 @@ const Aboutus = () => {
         }}>
         ABOUT US
       </Text>
+
+      <Text style={{
+        marginLeft:10,
+         marginTop: 10,
+         fontSize: 12,
+         padding: 10
+         }}>
+
+      At Kindernest, we are a team of passionate educators, developers, and designers committed to creating an enriching a good pre-school management experiencefor kindergarten teachers, parents and childrens. With backgrounds in early childhood education, 
+psychology, and technology, communication ,we bring together 
+expertise from various fields to craft an app that
+both teachers and parents will love.
+      </Text>

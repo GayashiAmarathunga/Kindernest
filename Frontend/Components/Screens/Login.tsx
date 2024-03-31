@@ -71,3 +71,28 @@ const Login = ({ navigation }) => {
     </View>
   )
 }
+
+export default Login
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "rgba(168, 159, 178, 1)"
+  },
+  text: {
+    color: 'black',
+    fontSize: 26,
+    lineHeight: 50,
+    textAlign: 'center',
+  },
+  text1: {
+    color: 'rgba(145, 0, 235, 1)',
+    fontSize: 36,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  text2: {
+    color: 'black',
+    fontSize: 16,
+    textAlign: 'center',
+  },

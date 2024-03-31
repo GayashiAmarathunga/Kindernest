@@ -90,3 +90,22 @@ import {
         style={{ width: 209, height: 229, alignSelf: 'center', marginTop: 13 }}
         source={require('../images/OCteacher.png')}
       />
+
+<View
+        style={{
+          alignSelf: 'center',
+          marginTop: 20,
+          backgroundColor: '#944CC0',
+          borderRadius: 5,
+          width: 345,
+          height: 363,
+          padding: 20,
+          borderWidth: 1,
+          borderColor: 'black',
+        }}>
+        <Text style={styles.text}>Link</Text>
+        <TextInput
+          style={styles.input}
+          value={classSession}
+          onChangeText={text => setClassSession(text)}
+        />

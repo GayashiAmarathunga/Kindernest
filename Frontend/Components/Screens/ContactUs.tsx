@@ -34,3 +34,16 @@ const Contactus = () => {
           We will get back to you as soon as we can!
         </Text>
       </View>
+
+      <View
+        style={{
+          alignSelf: 'center',
+          marginTop: 20,
+          backgroundColor: '#D7CFD9',
+          borderRadius: 5,
+          width: 345,
+          height: 335,
+          padding: 20,
+          borderWidth: 1,
+          borderColor: 'black',
+        }}></View>

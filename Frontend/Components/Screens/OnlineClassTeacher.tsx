@@ -144,3 +144,11 @@ import {
     </SafeAreaView>
   );
 };
+
+export default OnlineClassTeacher;
+
+const styles = StyleSheet.create({
+  text: {
+    textAlign: 'center',
+    marginTop: 5,
+  },

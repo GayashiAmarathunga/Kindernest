@@ -13,3 +13,23 @@ const ForgotPassword = ({ navigation }) => {
       </View>
   )
 }
+
+export default ForgotPassword
+
+const styles = StyleSheet.create({
+    container : {
+        flex:1,
+    },
+    image:{
+        flex:1
+    },
+    textheading: {
+        fontSize:26,
+        marginLeft:30,
+        color:'black',
+        marginTop:140,
+        marginBottom:20,
+        textAlign:'center',
+        fontWeight:'bold',
+        marginBottom:40
+    },

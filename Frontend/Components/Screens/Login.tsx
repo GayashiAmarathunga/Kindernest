@@ -28,3 +28,16 @@ const Login = ({ navigation }) => {
      }
        , []),
    );
+
+   const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  async function signInWithEmail() {
+
+    //Alert.alert(email)
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password,
+    })
+
+    //navigation.navigate('PHome')

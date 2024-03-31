@@ -96,3 +96,27 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
+  bbyimage: {
+    height: 250,
+    width: 150,
+    alignSelf: "center",
+    marginTop: 60
+  },
+  input: {
+    borderColor: 'rgba(145, 0, 235, 1)',
+    borderWidth: 1,
+    width: 300,
+    alignSelf: 'center',
+    borderRadius: 30,
+    backgroundColor: 'white',
+    color: 'black',
+    paddingLeft: 20,
+    marginBottom: 10
+  },
+  button: {
+    backgroundColor: 'rgba(145, 0, 235, 1)',
+    borderRadius: 50,
+    width: 'auto',
+    alignSelf: 'center',
+  },
+})

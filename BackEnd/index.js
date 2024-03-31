@@ -302,3 +302,15 @@ app.post('/progress', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
+
+app.get('/progress', async (req, res) => {
+    try {
+        await dbConnect();
+        // Fetch all progress records from the database
+        const allProgressRecords = await ProgressModel.find();
+        res.status(200).json(allProgressRecords);
+    } catch (error) {
+        console.error('Error fetching progress records:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});

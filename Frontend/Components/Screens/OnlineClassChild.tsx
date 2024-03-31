@@ -88,3 +88,27 @@ const OnlineClassChild = () => {
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+    text: {
+      textAlign: 'center',
+      marginTop: 5,
+    },
+    classContainer: {
+      alignSelf: 'center',
+      marginTop: 20,
+      backgroundColor: '#944CC0',
+      borderRadius: 0,
+      width: 345,
+      padding: 20,
+    },
+    classItem: {
+      marginBottom: 10,
+    },
+    classText: {
+      fontSize: 16,
+      marginBottom: 5,
+    },
+  });
+  
+  export default OnlineClassChild;

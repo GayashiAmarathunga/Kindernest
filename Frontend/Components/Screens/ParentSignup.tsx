@@ -23,7 +23,7 @@ const ParentSignup = ({navigation}) => {
       <Text style={styles.text}>Confirm Password</Text> 
       <TextInput style={styles.input}></TextInput>
       <TouchableOpacity onPress={() => navigation.navigate('Home')} style={styles.button}><Text style={{fontSize:20, padding:10, textAlign:'center', fontWeight:'bold'}}>Signup</Text></TouchableOpacity>
-      </ImageBackground>
+      </ImageBackground> 
     </View >
   )
 }

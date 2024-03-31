@@ -52,3 +52,17 @@ const Contactus = () => {
 
         <Text style={styles.text}>Email</Text>
         <TextInput style={styles.input} />
+
+        <Text style={styles.text}>Massage</Text>
+        <TextInput
+          style={{
+            borderColor: 'black',
+            borderWidth: 1,
+            borderRadius: 5,
+            width: 254,
+            height: 100,
+            marginTop: 5,
+            alignSelf: 'center',
+            backgroundColor: '#D9D9D9',
+          }}
+        />

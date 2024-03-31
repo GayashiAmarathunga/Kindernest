@@ -75,3 +75,28 @@ const ParentSignup = ({ navigation }) => {
         </View >
     )
 }
+
+export default ParentSignup
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+    image: {
+        flex: 1
+    },
+    textheading: {
+        fontSize: 26,
+        marginLeft: 30,
+        color: 'black',
+        marginTop: 100,
+        marginBottom: 20
+    },
+    text: {
+        color: 'black',
+        fontSize: 16,
+        textAlign: 'left',
+        marginLeft: 40,
+        marginBottom: -2,
+
+    },

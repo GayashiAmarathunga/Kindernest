@@ -18,3 +18,10 @@ import {
             }}>
             Class List
           </Text>
+
+          <TouchableOpacity
+          style={styles.buttons}>
+          <Text style={{textAlign: 'center', fontSize: 16, marginTop: 8}}>
+            Class 01
+          </Text>
+        </TouchableOpacity>

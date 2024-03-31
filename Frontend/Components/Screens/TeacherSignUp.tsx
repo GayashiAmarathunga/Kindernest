@@ -39,3 +39,20 @@ if (!error) {
     navigation.navigate('PHome')
 }
 };
+
+return (
+  <View style={styles.container}>   
+    <ImageBackground source={require('../images/SUPTE.png')} resizeMode="cover" style={styles.image}>
+      <Text style={styles.textheading}>Sign Up</Text>
+      <Text style={styles.text}>Teachers Name</Text>
+      <TextInput
+        style={styles.input}
+        value={teacherName}
+        onChangeText={setTeacherName}
+      />
+      <Text style={styles.text}>Kindergarten Level</Text>
+      <TextInput
+        style={styles.input}
+        value={kindergartenLevel}
+        onChangeText={setKindergartenLevel}
+      />

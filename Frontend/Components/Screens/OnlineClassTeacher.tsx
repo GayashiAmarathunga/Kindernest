@@ -76,4 +76,17 @@ import {
       }
     };
 
-  return
+  return(
+    <SafeAreaView style={{}}>
+      <Text style={{
+        fontSize: 30,
+        textAlign: 'center',
+        backgroundColor: '#AF9FB2'
+      }}>
+        online class
+      </Text>
+
+      <Image
+        style={{ width: 209, height: 229, alignSelf: 'center', marginTop: 13 }}
+        source={require('../images/OCteacher.png')}
+      />

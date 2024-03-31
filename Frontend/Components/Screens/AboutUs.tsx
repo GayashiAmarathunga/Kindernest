@@ -33,3 +33,16 @@ both teachers and parents will love.
           padding: 10}}>
       OUR TEAM
       </Text>
+
+      <View style={{
+        marginLeft:15,
+        // marginRight:10,
+         marginTop: 5,
+         backgroundColor:'#837785',
+         borderRadius: 5,
+         width: 360,
+         height: 374,
+
+         }}>
+
+      </View>

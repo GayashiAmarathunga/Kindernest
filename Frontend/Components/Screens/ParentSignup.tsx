@@ -46,3 +46,32 @@ const ParentSignup = ({ navigation }) => {
             navigation.navigate('PHome')
         }
     }
+
+
+    return (
+        <View style={styles.container}>
+            <ImageBackground source={require('../images/SUPPA.png')} resizeMode="cover" style={styles.image}>
+                <Text style={styles.textheading}>Sign Up</Text>
+                <Text style={styles.text}>Parent Name</Text>
+                <TextInput style={styles.input} onChangeText={text => setParentName(text)} />
+                <Text style={styles.text}>Child Name</Text>
+                <TextInput style={styles.input} onChangeText={text => setChildName(text)} />
+                <Text style={styles.text}>Kindergarten Level </Text>
+                <TextInput style={styles.input} onChangeText={text => setKindergartenLevel(text)} />
+                <Text style={styles.text}>Class</Text>
+                <TextInput style={styles.input} onChangeText={text => setClassLevel(text)} />
+                <Text style={styles.text}>Date of birth</Text>
+                <TextInput style={styles.input} onChangeText={text => setDateOfBirth(text)} />
+                <Text style={styles.text}>Email</Text>
+                <TextInput style={styles.input} onChangeText={text => setEmail(text)} />
+                <Text style={styles.text}>Password</Text>
+                <TextInput style={styles.input} onChangeText={text => setPassword(text)} />
+                <Text style={styles.text}>Confirm Password</Text>
+                <TextInput style={styles.input} onChangeText={text => setConfirmPassword(text)} />
+                <TouchableOpacity onPress={handleSignup} style={styles.button}>
+                    <Text style={{ fontSize: 20, padding: 10, textAlign: 'center', fontWeight: 'bold' }}>Signup</Text>
+                </TouchableOpacity>
+            </ImageBackground>
+        </View >
+    )
+}

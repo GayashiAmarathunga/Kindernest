@@ -172,3 +172,22 @@ app.get("/paypal", async (req, res) => {
             }
         ]
     };
+    
+    paypal.payment.create(create_payment_json, async function (error, payment) {
+        if (error) {
+            throw error;
+        } else {
+            console.log("Create Payment Response");
+            console.log(payment);
+            await dbConnect();
+            await PaymentModel.create({
+                paymentId: payment.id,
+                payerId: payerID,
+                paymentState: payment.state,
+                amount: payment.transactions[0].amount.total,
+                month: moment().format('MMMM')
+            })
+            res.redirect(payment.links[1].href);
+        }
+    });
+});

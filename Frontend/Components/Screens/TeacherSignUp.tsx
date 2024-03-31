@@ -89,3 +89,38 @@ return (
       </View>
     );
   };
+
+  export default TeacherSignUp
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+    image:{
+        flex:1
+    },
+    textheading: {
+        fontSize:26,
+        marginLeft:30,
+        color:'black',
+        marginTop:120,
+        marginBottom:20
+    },
+    text: {
+        color: 'black',
+        fontSize: 16,
+        textAlign: 'left',
+        marginLeft: 30,
+    },
+    input: {
+        borderColor: 'rgba(145, 0, 235, 1)',
+        borderWidth: 1,
+        width: 300,
+        marginLeft: 30,
+        borderRadius: 30,
+        backgroundColor: 'white',
+        color: 'black',
+        paddingLeft: 20,
+        marginBottom: 10,
+        height:40
+    },

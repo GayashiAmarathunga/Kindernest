@@ -65,3 +65,18 @@ both teachers and parents will love.
  application with a strong emphasis on good design and ease of use.
 
         </Text>
+
+        <Text style={{
+          textAlign: 'center',
+          marginTop: 5,
+          fontSize: 13,
+          fontWeight: 'bold'
+        }}>
+        Thank you for choosing Kindernest for your child's learning journey!
+        </Text>
+      </View>
+    </SafeAreaView>
+  );
+};
+
+export default Aboutus;

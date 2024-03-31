@@ -46,3 +46,22 @@ both teachers and parents will love.
          }}>
 
       </View>
+
+      <View>
+        <Text style={{
+          textAlign: 'center', 
+        marginTop: 5,
+         fontSize: 40
+         }}>
+        ,,
+        </Text>
+
+        <Text style={{
+          textAlign: 'center',
+          marginTop: 5,
+          fontSize: 12
+        }}>
+        Our mission is to build useful and secure kindergarten management
+ application with a strong emphasis on good design and ease of use.
+
+        </Text>

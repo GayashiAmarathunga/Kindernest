@@ -25,3 +25,11 @@ psychology, and technology, communication ,we bring together
 expertise from various fields to craft an app that
 both teachers and parents will love.
       </Text>
+
+      <Text style={{
+        textAlign: 'center',
+         marginTop: 10,
+          fontSize: 16, 
+          padding: 10}}>
+      OUR TEAM
+      </Text>

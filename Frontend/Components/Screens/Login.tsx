@@ -41,3 +41,12 @@ const Login = ({ navigation }) => {
     })
 
     //navigation.navigate('PHome')
+
+    if (error) Alert.alert(error.message)
+
+    if( data && data.user?.user_metadata.role == 'parent' ) navigation.navigate('PHome');
+    if( data && data.user?.user_metadata.role == 'teacher' ) navigation.navigate('THome');
+
+    //if (!error) navigation.navigate('PHome');
+
+  }

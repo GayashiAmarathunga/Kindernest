@@ -119,3 +119,35 @@ const Contactus = () => {
             Tel: 123-456-789
         </Text>
       </View>
+
+
+
+      {/* <View style={{
+        backgroundColor:'#D9D9D9',
+        height:100
+      }}>
+        
+      </View> */}
+    </SafeAreaView>
+
+);
+};
+
+export default Contactus;
+
+const styles = StyleSheet.create({
+text: {
+  marginLeft: 10,
+  marginTop: 5,
+},
+input: {
+  borderColor: 'black',
+  borderWidth: 1,
+  borderRadius: 5,
+  width: 254,
+  height: 10,
+  marginTop: 5,
+  alignSelf: 'center',
+  backgroundColor: '#D9D9D9',
+},
+});

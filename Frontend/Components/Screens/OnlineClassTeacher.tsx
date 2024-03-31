@@ -109,3 +109,20 @@ import {
           value={classSession}
           onChangeText={text => setClassSession(text)}
         />
+
+<Text style={styles.text}>Date</Text>
+        <TextInput
+          style={styles.input}
+          value={date}
+          onChangeText={text => setDate(text)}
+        />
+
+        <Text style={styles.text}>Time</Text>
+        <TextInput
+          style={styles.input}
+          value={time}
+          onChangeText={text => setTime(text)}
+        />
+
+
+      </View>

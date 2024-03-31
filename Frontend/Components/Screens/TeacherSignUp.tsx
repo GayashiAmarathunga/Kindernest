@@ -16,3 +16,26 @@ const TeacherSignUp = ({ navigation }) => {
       Alert.alert("Passwords do not match")
       return;
   }
+  
+  const { data, error } = await supabase.auth.signUp(
+    {
+        email: email,
+        password:  password,
+        options: {
+            data: {
+                role: 'teacher',
+                teacher_name: teacherName,
+                kindergarten_level: kindergartenLevel,
+                gender: gender
+            }
+        }
+    }
+)
+
+if (error) {
+    Alert.alert(error.message)
+}
+if (!error) {
+    navigation.navigate('PHome')
+}
+};

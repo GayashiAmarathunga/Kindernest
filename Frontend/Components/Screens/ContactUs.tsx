@@ -49,3 +49,6 @@ const Contactus = () => {
         }}>
              <Text style={styles.text}>Name</Text>
         <TextInput style={styles.input} />
+
+        <Text style={styles.text}>Email</Text>
+        <TextInput style={styles.input} />

@@ -62,3 +62,15 @@ const OnlineClassChild = () => {
         style={{width: 243, height: 270, alignSelf: 'center', marginTop: 60}}
         source={require('../images/OCchild.png')}
       />
+      <View
+        style={{
+          alignSelf: 'center',
+          marginTop: 20,
+          backgroundColor: '#944CC0',
+          borderRadius: 0,
+          width: 345,
+          height: 300,
+          padding: 20,
+          borderWidth: 1,
+          borderColor: 'black',
+        }}>

@@ -39,3 +39,39 @@ const ContactTeacher = () => {
         }
       });
     }, []);
+
+    const sendEmail = () => {
+        const apiUrl = process.env.API_URL;
+        const data = {
+          to: teacherEmail, 
+          replyTo: session?.user.email, 
+          text: text, 
+        };
+    
+        axios.post(`${apiUrl}/mailTeacher`, data)
+          .then(response => {
+            Alert.alert("Success", "Email sent successfully");
+          })
+          .catch(error => {
+            console.error('There was an error!', error);
+            Alert.alert("Error", "Failed to send email");
+          });
+      };
+    
+      return (
+        <View style={styles.container}>
+          <TextInput
+            style={styles.input}
+            onChangeText={setText}
+            value={text}
+            placeholder="Enter your message here"
+            multiline
+          />
+          <Button
+            title="Send Email"
+            onPress={sendEmail}
+          />
+        </View>
+      );
+    };
+    

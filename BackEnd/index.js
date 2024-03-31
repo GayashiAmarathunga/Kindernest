@@ -139,3 +139,15 @@ app.get('/classes/:className', async (req, res) => {
         res.json({ message: "error" });
     }
 });
+app.get("/paypal", async (req, res) => {
+
+    var payerID = req.query.payerID;
+    var create_payment_json = {
+        intent: "sale",
+        payer: {
+            payment_method: "paypal"
+        },
+        redirect_urls: {
+            return_url: `${process.env.API_URL}/success` || "https://psslr30s-3000.asse.devtunnels.ms/success",
+            cancel_url: `${process.env.API_URL}/cancel` || "https://psslr30s-3000.asse.devtunnels.ms/cancel"
+        },

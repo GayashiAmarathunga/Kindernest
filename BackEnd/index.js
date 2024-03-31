@@ -266,3 +266,39 @@ app.get("/checkpay/:payerid", async (req, res) => {
         res.json({ message: "error" });
     }
 })
+
+app.post('/progress', async (req, res) => {
+    try {
+        // Extract student email and progress data from request body
+        const { student, subjects, remark } = req.body;
+
+        // Calculate current month using Moment.js
+        const currentMonth = moment().format('MMMM');
+        await dbConnect();
+
+        // Check if there is a record with the student email and current month
+        let progressRecord = await ProgressModel.findOne({ student, month: currentMonth });
+
+        if (progressRecord) {
+            // If record exists, update it
+            progressRecord.subjects = subjects;
+            progressRecord.remark = remark;
+            await progressRecord.save();
+            res.status(200).json({ message: 'Progress record updated successfully' });
+        } else {
+            // If record doesn't exist, create a new one
+            progressRecord = new ProgressModel({
+                student,
+                subjects,
+                remark,
+                month: currentMonth,
+            });
+            await progressRecord.save();
+            res.status(201).json({ message: 'Progress record created successfully' });
+        }
+
+    } catch (error) {
+        console.error('Error handling progress:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});

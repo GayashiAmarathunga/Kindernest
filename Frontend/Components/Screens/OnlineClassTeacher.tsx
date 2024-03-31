@@ -51,4 +51,29 @@ import {
           console.log(classes[0].name)
           console.log(session?.user.user_metadata.teacher_name)
 
+          // Define the request body
+    const requestBody = {
+        session: classSession,
+        date: date,
+        time: time,
+        class: classes[0].name,
+        teacher: session?.user.user_metadata.teacher_name
+      };
+  
+      // Send POST request using Axios
+      axios.post(`${process.env.API_URL}/classes`, requestBody)
+        .then(response => {
+          // Handle successful response
+          console.log('Request sent successfully:', response.data);
+          Alert.alert('Class Added Successfully');
+          // You can do something after successfully sending the request, like showing a confirmation message
+        })
+        .catch(error => {
+          // Handle error
+          console.error('Error sending request:', error);
+          // You can display an error message to the user or handle the error in another way
+        });
+      }
+    };
+
   return

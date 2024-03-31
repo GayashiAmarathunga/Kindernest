@@ -46,4 +46,6 @@ const Contactus = () => {
           padding: 20,
           borderWidth: 1,
           borderColor: 'black',
-        }}></View>
+        }}>
+             <Text style={styles.text}>Name</Text>
+        <TextInput style={styles.input} />

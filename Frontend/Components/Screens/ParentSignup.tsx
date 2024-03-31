@@ -100,3 +100,22 @@ const styles = StyleSheet.create({
         marginBottom: -2,
 
     },
+    input: {
+        borderColor: 'rgba(145, 0, 235, 1)',
+        borderWidth: 1,
+        width: 300,
+        marginLeft: 30,
+        borderRadius: 30,
+        backgroundColor: 'white',
+        color: 'black',
+        paddingLeft: 20,
+        marginBottom: 10,
+        height: 40
+    },
+    button: {
+        backgroundColor: 'rgba(145, 0, 235, 1)',
+        borderRadius: 50,
+        width: 'auto',
+        alignSelf: 'center',
+    },
+})

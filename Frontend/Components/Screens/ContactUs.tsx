@@ -102,3 +102,11 @@ const Contactus = () => {
         }}> 
             INFO
         </Text>
+
+        <Text style={{
+            marginLeft: 30,
+            marginTop: 10,
+            fontSize: 16,
+        }}>
+        Email: kindernest.management@gmail.com
+        </Text>

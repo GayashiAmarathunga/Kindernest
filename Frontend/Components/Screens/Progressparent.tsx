@@ -73,4 +73,39 @@ const ProgressParent = () => {
             Progress
           </Text>
 
-          
+          <View>
+            <Text style={styles.text1} >
+              {progress && progress.month}
+            </Text>
+          </View>
+  
+          {/* UpGrading  */}
+  
+          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+            {/* Subjects */}
+            <View>
+              <View>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    textAlign: 'center',
+                    marginLeft: 35,
+                    backgroundColor: '#C19DC9',
+                    borderRadius: 5,
+                    width: 100,
+                    height: 30,
+                    borderWidth: 1,
+                    borderColor: 'black',
+                    marginTop: 15,
+                  }}>
+                  Learning
+                </Text>
+  
+                {progress &&
+                progress.subjects.map((subject, index) => (
+                  <Text key={index} style={styles.inputSub} >
+                    {subject.name}
+                  </Text>
+                ))}
+              </View>
+            </View>

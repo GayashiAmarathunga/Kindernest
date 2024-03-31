@@ -48,3 +48,37 @@ console.log("payload",payload)
       Alert.alert('Error sending progress data');
     });
 };
+
+return (
+  <SafeAreaView style={styles.container}>
+    <View>
+      <Image
+        style={{width: 393, height: 80}}
+        source={require('../images/prog.png')}
+      />
+
+      <Text
+        style={{
+          textAlign: 'center',
+          fontSize: 30,
+          marginTop: 0,
+          fontWeight: '500',
+        }}>
+        Progress
+      </Text>
+
+      <View>
+        <Text style={{textAlign: 'center', marginTop: 3, fontSize: 20}}>
+          Add Student
+        </Text>
+        <TextInput style={styles.input} value={student}
+        onChangeText={setStudent} />
+        <Text style={{textAlign: 'center', marginTop: 3, fontSize: 20}}>
+          Add month
+        </Text>
+        <TextInput style={styles.input} 
+        value={month}
+        onChangeText={setMonth}  
+        />
+
+      </View>

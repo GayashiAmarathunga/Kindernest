@@ -24,3 +24,30 @@ const Homeparent = ({ navigation }) => {
                 setLoading(false);
             });
     }, []);
+
+    const handleRefresh = () => {
+        setLoading(true);
+        // Send GET request to check payment status again
+        axios.get(`${process.env.API_URL}/checkpay/${session?.user.email}`)
+            .then(response => {
+                const { message } = response.data;
+                setPaymentStatus(message);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error('Error checking payment status:', error);
+                setLoading(false);
+            });
+    };
+
+    useEffect(() => {
+        supabase.auth.getSession().then(({ data: { session } }) => {
+            setSession(session)
+        })
+
+        supabase.auth.onAuthStateChange((_event, session) => {
+            setSession(session)
+        })
+
+
+    }, [])

@@ -8,4 +8,13 @@ import {
   import React from 'react';
 
   const ClassList = () => {
-    return
+    return (
+        <SafeAreaView style={{backgroundColor: '#AF9FB2',}}>
+          <Text
+            style={{
+              fontSize: 30,
+              textAlign: 'center',
+              marginTop: 10,
+            }}>
+            Class List
+          </Text>

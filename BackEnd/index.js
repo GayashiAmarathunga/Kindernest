@@ -329,3 +329,17 @@ app.get('/progress/:studentEmail', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
+
+app.get('/progress/:studentEmail/recent', async (req, res) => {
+    try {
+        const studentEmail = req.params.studentEmail;
+        await dbConnect();
+
+        // Fetch latest 5 progress record for the student email
+        const studentProgressRecord = await ProgressModel.find({ student: studentEmail }).sort({ created: -1 }).limit(5);
+        res.status(200).json(studentProgressRecord);
+    } catch (error) {
+        console.error('Error fetching progress records:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});

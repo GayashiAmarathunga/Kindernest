@@ -49,3 +49,16 @@ const OnlineClassChild = () => {
     const date = new Date(dateString);
     return date.toLocaleDateString(); // Format the date according to the user's locale
   };
+  return (
+    <SafeAreaView style={{ backgroundColor: '#AF9FB2'}}>
+        <Text style={{
+            fontSize:32,
+            textAlign: 'center',
+            marginTop:10
+        }}> 
+            online class
+        </Text>
+      <Image
+        style={{width: 243, height: 270, alignSelf: 'center', marginTop: 60}}
+        source={require('../images/OCchild.png')}
+      />

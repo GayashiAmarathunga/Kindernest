@@ -207,3 +207,62 @@ app.get("/success", (req, res) => {
             }
         ]
     };
+
+    paypal.payment.execute(paymentId, execute_payment_json, async function (
+        error,
+        payment
+    ) {
+        if (error) {
+            console.log(error.response);
+            throw error;
+        } else {
+            console.log("Get Payment Response");
+            console.log(payment);
+            await dbConnect();
+            //find using paymentId and update state
+            await PaymentModel.findOneAndUpdate({
+                paymentId: payment.id
+            },
+                {
+                    paymentState: payment.state
+                });
+
+            res.json({ message: "success" });
+        }
+    });
+});
+
+app.get("/cancel", (req, res) => {
+    res.json({ message: "cancel" });
+});
+
+app.get("/checkpay/:payerid", async (req, res) => {
+    try {
+
+
+        const payerId = req.params.payerid;
+        const month = moment().format('MMMM')
+
+        await dbConnect();
+
+
+        //check if there is a record matching for month payerId and  paymentState is approved
+        const data = await PaymentModel.findOne(
+            {
+                payerId,
+                month,
+                paymentState: "approved"
+            }
+        );
+
+        if (data) {
+            res.json({ message: "success", data });
+        }
+        else {
+            res.json({ message: "not paid yet" });
+        }
+    } catch (error) {
+        console.log(error)
+        res.json({ message: "error" });
+    }
+})

@@ -56,3 +56,15 @@ return (
         value={kindergartenLevel}
         onChangeText={setKindergartenLevel}
       />
+      <Text style={styles.text}>Gender</Text>
+          <TextInput
+            style={styles.input}
+            value={gender}
+            onChangeText={setGender}
+          />
+          <Text style={styles.text}>Email</Text>
+          <TextInput
+            style={styles.input}
+            value={email}
+            onChangeText={setEmail}
+          />

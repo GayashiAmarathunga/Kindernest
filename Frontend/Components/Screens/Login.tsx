@@ -19,3 +19,12 @@ const Login = ({ navigation }) => {
         ]);
         return true;
       };
+       // Add event listner to hardware back press
+       BackHandler.addEventListener('hardwareBackPress', onBackPress);
+       return () => {
+         // once the screen gets blur remove event listner
+         BackHandler.removeEventListener('hardwareBackPress', onBackPress);
+       };
+     }
+       , []),
+   );

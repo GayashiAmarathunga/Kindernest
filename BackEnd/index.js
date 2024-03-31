@@ -151,3 +151,24 @@ app.get("/paypal", async (req, res) => {
             return_url: `${process.env.API_URL}/success` || "https://psslr30s-3000.asse.devtunnels.ms/success",
             cancel_url: `${process.env.API_URL}/cancel` || "https://psslr30s-3000.asse.devtunnels.ms/cancel"
         },
+        transactions: [
+            {
+                item_list: {
+                    items: [
+                        {
+                            name: "item",
+                            sku: "item",
+                            price: "1.00",
+                            currency: "USD",
+                            quantity: 1
+                        }
+                    ]
+                },
+                amount: {
+                    currency: "USD",
+                    total: "1.00"
+                },
+                description: "This is the payment description."
+            }
+        ]
+    };

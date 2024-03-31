@@ -126,3 +126,21 @@ import {
 
 
       </View>
+
+      <TouchableOpacity
+        style={{
+          alignSelf: 'center',
+          marginTop: 20,
+          backgroundColor: '#944CC0',
+          borderRadius: 5,
+          width: 109,
+          height: 39,
+        }}
+        onPress={handleSubmit}>
+        <Text style={{ textAlign: 'center', fontSize: 16, marginTop: 8 }}>
+          Send
+        </Text>
+      </TouchableOpacity>
+    </SafeAreaView>
+  );
+};

@@ -39,3 +39,13 @@ import {
             Class 03
           </Text>
         </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.buttons}>
+          <Text style={{textAlign: 'center', fontSize: 16, marginTop: 8}}>
+            Class 04
+          </Text>
+        </TouchableOpacity>
+      </SafeAreaView>
+    );
+  };

@@ -35,4 +35,20 @@ import {
   
     }, [])
 
+    const handleSubmit = async () => {
+
+        let { data: classes, error } = await supabase
+          .from('classes')
+          .select('name')
+          .eq('teacher', session?.user.id)
+    
+        if (error) {
+          console.error('Error fetching classes:', error.message);
+          Alert.alert(error.message);
+          return;
+        }
+        if (classes && classes.length > 0) {
+          console.log(classes[0].name)
+          console.log(session?.user.user_metadata.teacher_name)
+
   return

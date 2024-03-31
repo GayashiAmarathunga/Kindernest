@@ -110,3 +110,12 @@ const Contactus = () => {
         }}>
         Email: kindernest.management@gmail.com
         </Text>
+
+        <Text style={{
+            marginLeft: 30,
+            marginTop: 10,
+            fontSize: 16,
+        }}>
+            Tel: 123-456-789
+        </Text>
+      </View>

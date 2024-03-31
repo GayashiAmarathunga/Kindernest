@@ -49,3 +49,16 @@ import {
       </SafeAreaView>
     );
   };
+
+  const styles = StyleSheet.create({
+    buttons: {
+        alignSelf: 'center',
+        marginTop: 20,
+        backgroundColor: '#CEC9CE',
+        borderRadius: 5,
+        width: 360,
+        height: 39,
+    },
+  });
+
+export default ClassList;

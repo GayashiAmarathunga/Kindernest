@@ -85,3 +85,11 @@ const Contactus = () => {
           </Text>
         </TouchableOpacity>
       </View>
+
+      <View style={{
+          marginTop: 20, 
+          backgroundColor: '#837785',
+          marginHorizontal: 16,
+          borderRadius: 5,
+          height: 280,
+          }}>

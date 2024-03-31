@@ -82,3 +82,10 @@ return (
             onChangeText={setConfirmPassword}
             secureTextEntry
           />
+           <TouchableOpacity style={styles.button} onPress={handleSignUp}>
+            <Text style={{fontSize:20, padding:10, textAlign:'center', fontWeight:'bold'}}>Signup</Text>
+          </TouchableOpacity>
+        </ImageBackground>
+      </View>
+    );
+  };

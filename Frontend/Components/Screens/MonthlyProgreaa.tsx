@@ -73,3 +73,16 @@ const MonthlyProgress = () => {
         </ScrollView>
     );
 };
+
+const styles = StyleSheet.create({
+    feedback: {
+        alignSelf: 'center',
+        marginTop: 20,
+        backgroundColor: '#CEC9CE',
+        borderRadius: 5,
+        width: 360,
+        height: 114,
+    },
+});
+
+export default MonthlyProgress;

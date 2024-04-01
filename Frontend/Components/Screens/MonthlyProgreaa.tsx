@@ -51,3 +51,25 @@ const MonthlyProgress = () => {
 
         fetchProgress();
     }, [session]);
+
+    return (
+        <ScrollView style={{ backgroundColor: '#AF9FB2' }}>
+            <Text
+                style={{
+                    fontSize: 25,
+                    textAlign: 'center',
+                    marginTop: 10,
+                }}>
+                Feedback & Remark
+            </Text>
+            <View>
+                {progress &&
+                    progress.map((item, index) => (
+                        <Text key={index} style={styles.feedback}>
+                            {item.remark}
+                        </Text>
+                    ))}
+            </View>
+        </ScrollView>
+    );
+};
